@@ -5,9 +5,11 @@ package :update, :provides => :system_update do
 end
 
 package :apt_update do
-  runner 'aptitude update'
+#  runner 'aptitude update'
+   runner 'apt-get update'
 end
 
 package :apt_upgrade do
-  runner 'aptitude -y full-upgrade'
+#  runner 'aptitude -y full-upgrade'
+   runner 'apt-get upgrade'
 end

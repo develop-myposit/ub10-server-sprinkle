@@ -5,7 +5,7 @@ package :configure_timezone, :provides => :timezone do
 end
 
 package :set_timezone do
-  timezone = "America/Edmonton"
+  timezone = "America/Vancouver"
   push_text timezone, "/etc/timezone"
   
   verify do

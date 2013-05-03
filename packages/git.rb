@@ -15,7 +15,7 @@ package :git_core do
 end
 
 package :tig do
-  desciption "Tig - ncurses interface for git"
+  description "Tig - ncurses interface for git"
   apt 'tig'
   
   verify do
