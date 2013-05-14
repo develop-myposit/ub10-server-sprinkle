@@ -1,4 +1,4 @@
-HOST = 'U6410S'
+HOST = 'ub10sbase'
 HOSTIP = '10.10.1.102'
 ROOT_USER = 'root'
 ROOT_USER_PASSWORD = 'foobar'

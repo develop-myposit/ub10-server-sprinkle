@@ -20,6 +20,6 @@ package :known_hosts do
   runner "sudo -u #{DEPLOY_USER} -i -- 'ssh-keyscan #{GIT_HOST} >> ~/.ssh/known_hosts'"
   
   verify do
-    file_contains '/home/deploy/.ssh/known_hosts', GIT_HOST
+    file_contains "/home/#{DEPLOY_USER}/.ssh/known_hosts", GIT_HOST
   end
 end

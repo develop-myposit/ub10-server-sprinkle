@@ -9,6 +9,7 @@ package :create_deploy_user do
   
   runner "useradd --create-home --shell /bin/bash --user-group --groups users,sudo #{DEPLOY_USER}"
   runner "echo '#{DEPLOY_USER}:#{DEPLOY_USER_PASSWORD}' | chpasswd"
+  runner "echo '#{DEPLOY_USER}\tALL=(ALL) ALL' | tee -a /etc/sudoers"
   
   verify do
     has_directory "/home/#{DEPLOY_USER}"
@@ -28,12 +29,13 @@ package :add_deploy_ssh_keys do
   end
   
   verify do
-    file_contains authorized_keys_file, id_rsa_pub
+#    file_contains authorized_keys_file, id_rsa_pub
+   has_file authorized_keys_file
   end
 end
 
 package :set_permissions do
-  description "Set correct permissons and ownership"
+  description "Set correct permissions and ownership"
   requires :add_deploy_ssh_keys
   
   runner "chmod 0700 /home/#{DEPLOY_USER}/.ssh"

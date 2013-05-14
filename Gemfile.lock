@@ -34,5 +34,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano
   i18n
   sprinkle!
