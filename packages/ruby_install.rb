@@ -9,7 +9,7 @@ package :install_ruby do
   
   requires :ruby_essentials
   
-  source "ftp://ftp.ruby-lang.org/pub/ruby/ruby-#{RUBY_VERSION}.tar.gz"
+  source "ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-#{RUBY_VERSION}.tar.gz" 
   
   verify do
     has_executable 'ruby'
