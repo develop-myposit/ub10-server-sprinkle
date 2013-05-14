@@ -11,7 +11,9 @@ Then run the following:
 
 ##Deployment
 
-Assuming you're using capistrano for deployment and doing it [the Github way](https://github.com/blog/470-deployment-script-spring-cleaning), you should be able to cap deploy:setup as soon as this recipe has been run.  Note that you'll need to do an nginx restart for it to pick up your unicorns.  If you need some help with your capistrano config, check out [my capistrano gist](https://gist.github.com/1271350).
+Assuming you're using capistrano for deployment and doing it [the Github way](https://github.com/blog/470-deployment-script-spring-cleaning), you should be able to cap deploy:setup as soon as this recipe has been run.  Note that you'll need to do an nginx restart for it to pick up your unicorns.  
+
+If you need some help with your capistrano config, check out [mm53bar/deploy.rb capistrano gist](https://gist.github.com/1271350).
 
 Here's an easy way to restart nginx from capistrano:
 
